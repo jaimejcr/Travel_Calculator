@@ -41,27 +41,21 @@ function costeHotel() {
 }
 costeHotel()
 
-const precioAvion = {
-Barcelona: 90,
-Madrid: 90,
-Sevilla: 50,
-Valencia: 40,
-};
+
 
 function costeAvion (ciudad, noches) {
-    submit.addEventListener("click", (event)=>{
-        event.preventDefault();
-        const inputCiudad = document.querySelector("#city");
-        const inputCiudadValue = inputCiudad.value;
 
+    const precioAvion = {
+    Barcelona: 90,
+    Madrid: 90,
+    Sevilla: 50,
+    Valencia: 40,
+    };
 
-    })
-    
+    const costeNoche = precioAvion[ciudad] * noches;
+    console.log(`Coste del viaje a ${ciudad} por ${noches} noches: ${costeNoche}€`);
 }
-costeAvion();
-
-
-
+costeAvion("Barcelona", 2);
 
 
 
